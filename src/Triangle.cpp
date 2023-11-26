@@ -47,10 +47,10 @@ Triangle::isEquilateral() const {
 
 Triangle::Kind
 Triangle::getKind() const {
-  if (isIsosceles()) {
-    return Kind::ISOSCELES;
-  } else if (isEquilateral()) {
+  if (isEquilateral()) {
     return Kind::EQUILATERAL;
+  } else if (isIsosceles()) {
+    return Kind::ISOSCELES;
   } else {
     return Kind::SCALENE;
   }

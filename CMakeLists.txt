@@ -39,11 +39,11 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 if (CMAKE_VERSION VERSION_LESS 2.8.11)
     include_directories("${gtest_SOURCE_DIR}/include")
 endif ()
-
-set(SOURCE_FILES src/testsubject.cpp src/Triangle.cpp)
+set(SOURCE_FILES src/testsubject.cpp src/Triangle.cpp src/Hailstone.cpp)
+set(SOURCE_FILES src/testsubject.cpp src/Triangle.cpp src/Hailstone.cpp)
 add_executable(main main.cpp ${SOURCE_FILES})
 
-set(TEST_FILES test/tester.cpp test/triangletest.cpp)
+set(TEST_FILES test/tester.cpp test/triangletest.cpp test/hailstonetest.cpp)
 add_executable(test ${TEST_FILES} ${SOURCE_FILES})
 
 target_link_libraries(test gtest gtest_main)
